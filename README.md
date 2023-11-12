@@ -12,6 +12,7 @@ This budget tracker is a simple web application that helps you track your income
 
 ## Usage
 
+- Go to https://budget-tracker-vert.vercel.app/
 - Fill in the income description and amount, then click the "Add Income" button to add income items.
 - Fill in the expense description and amount, then click the "Add Expense" button to add expense items.
 - The summary section will show the total income, total expenses, and the overall balance.
