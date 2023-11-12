@@ -1,0 +1,115 @@
+$primary-color: #146eff;
+$font-family: arial, sans-seriff;
+$gradient-color1: #87CEFA;
+$gradient-color2: #fff;
+
+@mixin gradient {
+    background: linear-gradient(to bottom, $gradient-color1, $gradient-color2);
+  }
+
+body {
+    font-family: $font-family;
+    background: linear-gradient(to bottom, $gradient-color1, $gradient-color2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  //Container/main styling
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 70%;
+    text-align: center;
+
+    //Totals styling
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+  
+      h2{
+        color: #1cb0ff;
+        font-size: 1.3rem;
+      }
+
+      p{
+        font-size: 1rem;
+      }
+    }
+  
+    h1 {
+      font-size: 2rem;
+      color: $primary-color;
+    }
+  
+    .form-container {
+      margin: 20px 0;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      }
+    }
+  
+    //Styling for income and expense inputs/labels/buttons
+    #income-form,
+    #expense-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin: 2%;
+      }
+
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 50%;
+        text-align: center;
+      }
+
+      button {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px;
+        margin: 2%;
+        border: none;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+    }
+
+   // Media Query for Tablets
+@media (max-width: 768px) {
+  .container {
+    width: 60%; 
+  }
+
+  .form-container form input {
+    width: 70%; 
+  }
+}
+
+// Media Query for Mobile
+@media (max-width: 480px) {
+  .container {
+    width: 80%;
+  }
+
+  .form-container form input {
+    width: 80%; 
+  }
+}
